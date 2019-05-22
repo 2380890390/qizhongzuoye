@@ -56,3 +56,40 @@ private final void outputNote() {
         intent.setClass(NoteEditor.this,OutputText.class);  
         NoteEditor.this.startActivity(intent);  
     }  
+ # 笔记排序
+ <item
+    android:id="@+id/menu_sort"
+    android:title="@string/menu_sort"
+    android:icon="@android:drawable/ic_menu_sort_by_size"
+    android:showAsAction="always" >
+    <menu>
+        <item
+            android:id="@+id/menu_sort1"
+            android:title="@string/menu_sort1"/>
+        <item
+            android:id="@+id/menu_sort2"
+            android:title="@string/menu_sort2"/>
+        <item
+            android:id="@+id/menu_sort3"
+            android:title="@string/menu_sort3"/>
+        </menu>
+    </item>
+
+在NoteList菜单switch下添加case：
+case R.id.menu_sort1:  
+        cursor = managedQuery(  
+                getIntent().getData(),              
+                PROJECTION,                        
+                null,                             
+                null,                              
+                NotePad.Notes._ID     
+                );    
+        adapter = new MyCursorAdapter(  
+                this,  
+                R.layout.noteslist_item,  
+                cursor,  
+                dataColumns,  
+                viewIDs  
+        );  
+        setListAdapter(adapter);  
+        return true;  
