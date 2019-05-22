@@ -7,9 +7,9 @@ Date date = new Date(now);
 SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");  
 String dateTime = format.format(date);  
 # 在dataColumns，viewIDs中补充时间部分：
-String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE } ;  
-int[] viewIDs = { android.R.id.text1 , R.id.text1_time };  
-![image](https://github.com/2380890390/qizhongzuoye/blob/master/TIM%E5%9B%BE%E7%89%8720190522121758.jpg)  
+String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE } ;    
+int[] viewIDs = { android.R.id.text1 , R.id.text1_time };   
+![image](https://github.com/2380890390/qizhongzuoye/blob/master/TIM%E5%9B%BE%E7%89%8720190522121758.jpg)    
 # 搜索功能
 # 搜索图标
 <item  
