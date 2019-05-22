@@ -12,7 +12,7 @@ int[] viewIDs = { android.R.id.text1 , R.id.text1_time };
 ![image](https://github.com/2380890390/qizhongzuoye/blob/master/TIM%E5%9B%BE%E7%89%8720190522121758.jpg)  
 # 搜索功能
 # 搜索图标
-<item
+<item  
     android:id="@+id/menu_search"  
     android:title="@string/menu_search"  
     android:icon="@android:drawable/ic_search_category_default"  
